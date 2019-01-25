@@ -15,21 +15,27 @@ public class BookDemo {
 
 
         do {
-            System.out.print("What do you want to do? 1) See how many books. 2) Add a book.  3) Exit");
+
+            System.out.print("What you like to do? [PLEASE ENTER A NUMBER ONLY]\n1) See how many books.\n2) Add a book.\n3) Exit\n");
             userInput = myScanner.nextInt();
 
             switch (userInput) {
+
                 case 1:
-                    System.out.println(myLibrary.numberOfBooksInLibrary());
+
+                    System.out.println("The current number of books in the library is:  " + myLibrary.numberOfBooksInLibrary() + "\n");
                     anotherBook = true;
                     break;
+
                 case 2:
+
                     boolean addBook = true;
+
                     do {
 
                         Book myBook = new Book();
 
-                        System.out.println("\nWhat is the book title?");
+                        System.out.println("What is the book title?");
                         myBook.setBookTitle(myScanner.next());
 
                         System.out.println("\nWhat is the book author?");
@@ -41,7 +47,8 @@ public class BookDemo {
                         System.out.println("\nWhat is the year of publication?");
                         myBook.setYearOfPublication(myScanner.nextInt());
 
-                        System.out.println("\nWould you like to add another book? 1 for yes.  2 for no.");
+                        System.out.println("\nWould you like to add another book?[PLEASE ENTER A NUMBER ONLY]\n1) Add" +
+                                " another book.\n2) Stop adding books.");
                         answer = myScanner.nextInt();
 
                         myLibrary.allBooks[index] = myBook;
