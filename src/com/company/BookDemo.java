@@ -16,7 +16,7 @@ public class BookDemo {
 
         do {
 
-            System.out.print("What you like to do? [PLEASE ENTER A NUMBER ONLY]\n1) See how many books.\n2) Add a book.\n3) Exit\n");
+            System.out.print("What would you like to do? [PLEASE ENTER A NUMBER ONLY]\n1) See how many books.\n2) Add a book.\n3) Exit\n");
             userInput = myScanner.nextInt();
 
             switch (userInput) {
@@ -36,13 +36,16 @@ public class BookDemo {
                         Book myBook = new Book();
 
                         System.out.println("What is the book title?");
-                        myBook.setBookTitle(myScanner.next());
+                        //String newTitle = myScanner.nextLine();
+                        myScanner.nextLine();
+                        //myBook.setTitle(newTitle);
+                        myBook.setBookTitle(myScanner.nextLine());
 
                         System.out.println("\nWhat is the book author?");
-                        myBook.setBookAuthor(myScanner.next());
+                        myBook.setBookAuthor(myScanner.nextLine());
 
                         System.out.println("\nWhat is the book genre?");
-                        myBook.setGenre(myScanner.next());
+                        myBook.setGenre(myScanner.nextLine());
 
                         System.out.println("\nWhat is the year of publication?");
                         myBook.setYearOfPublication(myScanner.nextInt());
