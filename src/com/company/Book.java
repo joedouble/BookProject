@@ -5,7 +5,7 @@ public class Book {
     private String bookTitle;
     private String bookAuthor;
     private String genre;
-    private int yearOfPublication;
+    private String yearOfPublication;
 
     public void setBookTitle(String bookTitle) {
         this.bookTitle = bookTitle;
@@ -31,11 +31,11 @@ public class Book {
         return genre;
     }
 
-    public void setYearOfPublication(int yearOfPublication) {
+    public void setYearOfPublication(String yearOfPublication) {
         this.yearOfPublication = yearOfPublication;
     }
 
-    public int getYearOfPublication() {
+    public String getYearOfPublication() {
         return yearOfPublication;
     }
 
