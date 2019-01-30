@@ -39,10 +39,18 @@ public class Book {
         return yearOfPublication;
     }
 
-    public void printDetails() {
-        System.out.println("Book Title is:  " + bookTitle + "\n" +
-        "Book Author is :  " + bookAuthor + "\n" + "The book genre " +
-                "is:  " + genre + "\n" + "The year of publication is:  " +
-                yearOfPublication + "\n");
+    public Book(String bookTitle, String bookAuthor, String genre, String yearOfPublication) {
+        this.bookTitle = bookTitle;
+        this.bookAuthor = bookAuthor;
+        this.genre = genre;
+        this.yearOfPublication = yearOfPublication;
     }
+
+    public void printDetails() {
+        System.out.println("Book Title is:  " + bookTitle +
+                "\nBook Author is :  " + bookAuthor +
+                "\nThe book genre is:  " + genre +
+                "\nThe year of publication is:  " + yearOfPublication + "\n");
+    }
+
 }
